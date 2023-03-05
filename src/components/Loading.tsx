@@ -42,7 +42,7 @@ const Loading: FC<PropsWithChildren<{}>> = ({ children }) => {
         ></div>
       </div>
 
-      <div>{children}</div>
+      <div style={{ marginTop: "1em" }}>{children}</div>
     </div>
   );
 };

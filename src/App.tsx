@@ -29,7 +29,7 @@ const webR = new WebR({
 
 function App() {
   const [loadingMessage, setLoadingMessage] = useState<string | null>(
-    "Loading WebR..."
+    "Loading WebR... This might take a few minutes if it is the first time you load this page"
   );
 
   const [scripts, setScripts] = useState(0);
