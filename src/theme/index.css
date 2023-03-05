@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Raleway&display=swap");
+
+:root {
+  --primary: 0deg 0% 100%;
+  --contrast: 0deg 0% 15%;
+  --contrast-text: white;
+
+  --green: 140deg 45% 50%;
+  --red: 0deg 45% 60%;
+  --blue: 180deg 65% 45%;
+
+  --accent: var(--blue);
+  /* --accent: 288deg 100% 50%; */
+}
+
+html {
+  height: 100;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Raleway;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+main {
+  max-width: 90vw;
+  width: 1200px;
+  margin: auto;
+}
+
+/* Components */
+
+textarea,
+pre {
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+code {
+  display: block;
+}
+
+button {
+  border: none;
+  padding: 1em 2em;
+  font-family: Raleway;
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--contrast-text);
+  background-color: hsl(var(--accent));
+  box-shadow: 5px 5px 0 hsl(var(--contrast) / 50%);
+}
+
+button:hover {
+  background-color: hsl(var(--accent) / 50%);
+  box-shadow: 5px 5px 0 hsl(var(--contrast) / 80%);
+}
+
+input,
+textarea {
+  display: block;
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  min-width: 50px;
+  padding: 8px;
+  text-align: left;
+  font-weight: 500;
+  border-bottom: solid 1px hsl(var(--primary) / 10%);
+}
+
+td {
+  min-width: 50px;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  border-bottom: solid 1px hsl(var(--primary) / 10%);
+}
+
+tr:last-child th {
+  border-bottom: 0;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Classes */
+
+.green {
+  --accent: var(--green);
+}
+
+.red {
+  --accent: var(--red);
+}
+
+.code {
+  font-family: JetBrains Mono;
+  font-size: 0.9rem;
+  padding: 1em;
+  color: var(--contrast-text);
+  background-color: hsl(var(--contrast));
+  white-space: pre;
+}
+
+.code-line {
+  font-family: JetBrains Mono;
+  font-size: 0.9rem;
+}
+
+.shadow {
+  color: white;
+  background-color: hsl(var(--contrast));
+  box-shadow: 5px 5px 0 hsl(var(--accent));
+}
+
+.dataframe {
+  display: inline-block;
+  background: hsl(var(--contrast));
+  color: white;
+}
+
+.dataframe-header {
+  background-color: hsl(var(--primary) / 10%);
+  margin-block-end: 0;
+}
+
+.dataframe-body {
+  max-height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid hsl(var(--primary) / 10%);
+}
+
+/* Helpers */
+
+.bold {
+  font-weight: bold;
+}
+
+.contrast {
+  color: var(--contrast-text);
+  background-color: hsl(var(--contrast));
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Loading */
+
+.loadingBar {
+  width: 10px;
+  background: gainsboro;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate, alternate;
+  margin-block-end: 0;
+}
+
+@keyframes barHeight {
+  from {
+    height: 20%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes barColor {
+  from {
+    background-color: whitesmoke;
+  }
+
+  to {
+    background-color: #888;
+  }
+}
+
+/* Scrollbar */
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  padding-left: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+  background: transparent;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "webrreact",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:worker && npm run build:serviceworker && vite",
+    "build:worker": "cp ./node_modules/@r-wasm/webr/dist/webr-worker.js ./public/",
+    "build:serviceworker": "cp ./node_modules/@r-wasm/webr/dist/webr-serviceworker.js ./public/",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@r-wasm/webr": "^0.1.0-alpha.18",
+    "highlight.js": "^11.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-simple-code-editor": "^0.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
