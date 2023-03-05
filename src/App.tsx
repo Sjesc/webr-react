@@ -187,9 +187,15 @@ function App() {
               <div style={{ marginTop: "2em" }}>
                 <p>Made by Silvino Escalona</p>
                 <p>
-                  Powered by{" "}
+                  R execution powered by{" "}
                   <a href="https://github.com/georgestagg/webR" target="_blank">
                     WebR
+                  </a>
+                </p>
+                <p>
+                  Hosted on{" "}
+                  <a href="https://www.netlify.com/" target="_blank">
+                    Netlify
                   </a>
                 </p>
               </div>
