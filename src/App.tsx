@@ -183,6 +183,16 @@ function App() {
                 webR={webR}
                 script={`plot(data2)\ntitle("Rendering plots with R in the browser", line = 3)`}
               />
+
+              <div style={{ marginTop: "2em" }}>
+                <p>Made by Silvino Escalona</p>
+                <p>
+                  Powered by{" "}
+                  <a href="https://github.com/georgestagg/webR" target="_blank">
+                    WebR
+                  </a>
+                </p>
+              </div>
             </div>
           )}
         </ConsoleContextProvider>
